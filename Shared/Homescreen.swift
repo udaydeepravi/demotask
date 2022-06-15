@@ -16,19 +16,18 @@ struct Homescreen: View {
         
         ScrollView(.vertical) {
             
-            dividerline(dayone: "20-21")
+            Dividerline(dayone: "20-21")
             
             VStack(spacing: 18) {
-                ForEach(events){event in
-                    // cardview
-                    Eventcardview(event: event)
-                }
-            }
-            
-            VStack(spacing: 18) {
-                ForEach(events2){event in
-                    // cardview
-                    Eventcardview(event: event)
+                
+                ForEach(events) { singleEvent in
+                    
+                    if singleEvent.tittle.isEmpty {
+                        Dotview()
+                    } else {
+                        // cardview
+                        Eventcardview(event: singleEvent)
+                    }
                 }
             }
         }
@@ -41,7 +40,7 @@ struct Homescreen_Previews: PreviewProvider {
     }
 }
 
-struct dividerline: View {
+struct Dividerline: View {
     
     var dayone: String
     

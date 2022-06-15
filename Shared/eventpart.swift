@@ -53,7 +53,7 @@ struct eventpart: View {
                     .cornerRadius(10.0)
                     
                     ForEach(0..<5) { index in
-                        dotsview()
+                        Dotview()
                     }
                 }
             }
@@ -67,17 +67,3 @@ struct eventpart_Previews: PreviewProvider {
     }
 }
 
-
-struct dotsview: View {
-    var body: some View {
-        VStack{
-            HStack {
-                Image("circle")
-                    .renderingMode(.template)
-                    .foregroundColor(.secondary)
-            }
-            .frame(width: 310, height: 110, alignment: .center)
-            .cornerRadius(10.0)
-        }
-    }
-}

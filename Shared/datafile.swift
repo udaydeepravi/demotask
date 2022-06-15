@@ -58,7 +58,7 @@ struct datafile: View {
                         .stroke(Color.gray, lineWidth: 0.5)
                 )
                 ForEach(0..<6) { index in
-                    dotsview()
+                    Dotview()
                 }
             }
         }
